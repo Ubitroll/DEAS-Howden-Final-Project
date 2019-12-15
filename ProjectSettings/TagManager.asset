@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Blue_Button
+  - Red_Door
+  - Blue_Door
+  - Red_Button
+  - Pipe
+  - Start_Pipe
+  - End_Pipe
   layers:
   - Default
   - TransparentFX
