@@ -23,7 +23,8 @@ public class Player : MonoBehaviour
     public float prsZ;
 
     public int machineState;
-   
+
+    private GameObject go;   
     //============================
 
 
@@ -33,7 +34,7 @@ public class Player : MonoBehaviour
         initOffset = Camera.main.transform.position - transform.position;
         mainCamera = Camera.main;
         target = null;
-        currentRoom = GameObject.FindWithTag("MainRoom").GetComponent<Room>();
+       // currentRoom = GameObject.FindWithTag("MainRoom").GetComponent<Room>();
        
     }
 
@@ -54,7 +55,9 @@ public class Player : MonoBehaviour
             Debug.Log(machineState);
         }
 
+
        
+
         //if (machines != null)
         //{
         //    foreach (GameObject machine in machines)
@@ -120,8 +123,11 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        // if (Input.GetKey(KeyCode.W))
-        //     transform.Translate(Vector3.forward * 2 * Time.deltaTime);
+        if (Input.GetKey(KeyCode.A))
+            machineState = 2;
+
+        if (Input.GetKey(KeyCode.D))
+            machineState = 3;
 
         // if (Input.GetKey(KeyCode.A))
         //     transform.Translate(Vector3.left * 2 * Time.deltaTime);
@@ -215,15 +221,22 @@ public class Player : MonoBehaviour
             }
         }
 
-        if(GameObject.Find("ExitTrigger"))
-        {
+        go = GameObject.FindWithTag("Room");
 
+        if (col.gameObject.name == "ExitTrigger")
+        {
+           
+            if (machineState == 2 || machineState == 3)
+            {
+                Destroy(go);
+                GameObject.Find("Room Spawn point").GetComponent<PuzzleRoomRandomSpawn>().SpawnRoom();
+            }
         }
 
-        if (GameObject.Find("EnterTrigger"))
-        {
-
-        }
+        //if (col.gameObject.name == "EnterTrigger")
+        //{
+        //    GameObject.Find("Room Spawn point").GetComponent<PuzzleRoomRandomSpawn>().playerRoom = 2;
+        //}
 
     }
 
