@@ -215,15 +215,18 @@ public class Player : MonoBehaviour
             }
         }
 
-        //if(col.gameObject.tag == "Arrow")
-        //{
-        //    GetComponent<NavMeshAgent>().destination = col.transform.GetComponent<ArrowScript>().twinArrow.transform.position;
-        //}
+        if(GameObject.Find("ExitTrigger"))
+        {
+
+        }
+
+        if (GameObject.Find("EnterTrigger"))
+        {
+
+        }
 
     }
 
-    void OnColliderEnter(Collider col)
-    {
-
-    }
+    
+    
 }
