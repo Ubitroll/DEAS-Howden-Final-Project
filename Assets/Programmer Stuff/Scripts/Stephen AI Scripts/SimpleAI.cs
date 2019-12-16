@@ -43,18 +43,24 @@ public class SimpleAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If the current state of the AI is working
         if (currentState == state.Working)
         {
+            // Determine the distance to the desk
             float distanceToDesk = (desk.transform.position - this.transform.position).magnitude;
+            //If the desk is within a certain distance 
             if (distanceToDesk <= 4)
             {
+
                 if (machine.GetComponent<Machine>().currentState == Machine.MachineState.BROKEN)
                 {
 
-
                     timeLeftUntilFix -= Time.deltaTime;
+
+
                     if (timeLeftUntilFix <= 0.0f)
                     {
+
                         timeLeftUntilFix = angerTime;
                     }
 
@@ -71,17 +77,23 @@ public class SimpleAI : MonoBehaviour
 
         if (currentState == state.Fixing)
         {
+
             float distanceToMachine = (machine.transform.position - this.transform.position).magnitude;
+
             if (distanceToMachine <= 4)
             {
+
                 timeLeftUntilWork -= Time.deltaTime;
+
                 if (timeLeftUntilWork <= 0.0f)
                 {
+
                     timeLeftUntilWork = fixTime;
                 }
 
                 if (timeLeftUntilWork == fixTime)
                 {
+
                     machine.GetComponent<Machine>().currentState = Machine.MachineState.WORKING;
                     machine.GetComponent<Machine>().timer.timeLeft = Random.Range(8, 16);
                     agent.SetDestination(desk.transform.position);
