@@ -33,7 +33,10 @@ public class SimpleAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Set state to working
         currentState = state.Working;
+
+        // Set the AI's destination to their desk
         agent.SetDestination(desk.transform.position);
     }
 

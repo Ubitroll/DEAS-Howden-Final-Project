@@ -13,6 +13,7 @@ public class PipePieceScript : MonoBehaviour
 
     public GameObject pipeBehindInSequence; // Indicates which pipe will be supplying the current pipe with water
     public GameObject middleOfPipe; // Lets the script change the colour on the pipe to indicate water flow
+    public GameObject pipeManagerObject;
 
     public bool isInCorrectPosition; // Determines if pipe is in correct postion
     public bool isActive; // Determines if pipe is recieving water from the previous pipe
@@ -21,46 +22,8 @@ public class PipePieceScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // If this isnt the starting pipe
-        if (this.tag != "Start_Pipe")
-        {
-            // If this isnt the end pipe
-            if (this.tag != "End_Pipe")
-            {
-                // Generate a random number
-                GenerateRandomNumber();
-
-                // Check the pipes rotation
-                CheckRotation();
-
-                // While i is less than the number of rotations
-                int i = 1;
-                while (i < numberOfRotations)
-                {
-                    // Rotate the piece 90 degreese around the X
-                    this.transform.Rotate(90, 0, 0);
-                    // Increase the current rotation number and I
-                    currentRotation++;
-                    i++;
-
-                    // Constrains the current rotation number between 1 and 4
-                    if (currentRotation > 4)
-                    {
-                        currentRotation = 1;
-                    }
-                }
-            }
-        }
-
-        // Initialises the start pipe by activating it and setting it in the correct rotation
-        if (this.tag == "Start_Pipe")
-        {
-            isActive = true;
-            isInCorrectPosition = true;
-        }
-
-        // Update the colour of any pipes that are active
-        UpdateColour();
+        InitialisePipe();
+    
     }
 
     // Update is called once per frame
@@ -137,6 +100,51 @@ public class PipePieceScript : MonoBehaviour
             {
                 isActive = false;
             }
+        }
+
+        // Update the colour of any pipes that are active
+        UpdateColour();
+    }
+
+    // Initialises the pipe
+    public void InitialisePipe()
+    {
+        // If this isnt the starting pipe
+        if (this.tag != "Start_Pipe")
+        {
+            // If this isnt the end pipe
+            if (this.tag != "End_Pipe")
+            {
+                // Generate a random number
+                GenerateRandomNumber();
+
+                // Check the pipes rotation
+                CheckRotation();
+
+                // While i is less than the number of rotations
+                int i = 1;
+                while (i < numberOfRotations)
+                {
+                    // Rotate the piece 90 degreese around the X
+                    this.transform.Rotate(90, 0, 0);
+                    // Increase the current rotation number and I
+                    currentRotation++;
+                    i++;
+
+                    // Constrains the current rotation number between 1 and 4
+                    if (currentRotation > 4)
+                    {
+                        currentRotation = 1;
+                    }
+                }
+            }
+        }
+
+        // Initialises the start pipe by activating it and setting it in the correct rotation
+        if (this.tag == "Start_Pipe")
+        {
+            isActive = true;
+            isInCorrectPosition = true;
         }
 
         // Update the colour of any pipes that are active

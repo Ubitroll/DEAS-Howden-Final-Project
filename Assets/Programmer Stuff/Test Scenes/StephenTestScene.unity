@@ -143,6 +143,7 @@ MonoBehaviour:
   correctRotationTwo: 0
   pipeBehindInSequence: {fileID: 1522046293}
   middleOfPipe: {fileID: 1198751177}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 1
@@ -262,6 +263,7 @@ MonoBehaviour:
   correctRotationTwo: 3
   pipeBehindInSequence: {fileID: 1171973078}
   middleOfPipe: {fileID: 692952785}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 0
@@ -384,6 +386,7 @@ MonoBehaviour:
   correctRotationTwo: 0
   pipeBehindInSequence: {fileID: 9652182}
   middleOfPipe: {fileID: 1477773924}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 0
@@ -423,6 +426,7 @@ MonoBehaviour:
   correctRotationTwo: 0
   pipeBehindInSequence: {fileID: 1079211017}
   middleOfPipe: {fileID: 1018043097}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 1
@@ -536,6 +540,7 @@ MonoBehaviour:
   correctRotationTwo: 4
   pipeBehindInSequence: {fileID: 1031596914}
   middleOfPipe: {fileID: 1455687921}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 1
@@ -807,6 +812,7 @@ MonoBehaviour:
   correctRotationTwo: 3
   pipeBehindInSequence: {fileID: 1298626832}
   middleOfPipe: {fileID: 733427939}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 0
@@ -949,6 +955,7 @@ MonoBehaviour:
   correctRotationTwo: 0
   pipeBehindInSequence: {fileID: 1522046293}
   middleOfPipe: {fileID: 1179700204}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 0
@@ -1800,6 +1807,7 @@ MonoBehaviour:
   correctRotationTwo: 1
   pipeBehindInSequence: {fileID: 53460993}
   middleOfPipe: {fileID: 1659443071}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 0
@@ -1987,6 +1995,7 @@ MonoBehaviour:
   correctRotationTwo: 0
   pipeBehindInSequence: {fileID: 2137325981}
   middleOfPipe: {fileID: 702195405}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 1
@@ -2026,6 +2035,7 @@ MonoBehaviour:
   correctRotationTwo: 1
   pipeBehindInSequence: {fileID: 2010230932}
   middleOfPipe: {fileID: 1090457353}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 0
@@ -2143,6 +2153,7 @@ MonoBehaviour:
   correctRotationTwo: 4
   pipeBehindInSequence: {fileID: 1181542353}
   middleOfPipe: {fileID: 495953931}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 1
@@ -2188,6 +2199,7 @@ MonoBehaviour:
   correctRotationTwo: 2
   pipeBehindInSequence: {fileID: 1757174818}
   middleOfPipe: {fileID: 1596314080}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 0
@@ -2239,6 +2251,7 @@ MonoBehaviour:
   correctRotationTwo: 3
   pipeBehindInSequence: {fileID: 1085995921}
   middleOfPipe: {fileID: 1271533683}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 1
@@ -2358,6 +2371,7 @@ MonoBehaviour:
   correctRotationTwo: 3
   pipeBehindInSequence: {fileID: 2056209500}
   middleOfPipe: {fileID: 1941571602}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 1
@@ -2385,7 +2399,7 @@ GameObject:
   - component: {fileID: 1309628233}
   - component: {fileID: 1309628232}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: PipeManagerObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2404,6 +2418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 80220712}
+  currentState: 0
 --- !u!4 &1309628233
 Transform:
   m_ObjectHideFlags: 0
@@ -2441,6 +2456,7 @@ MonoBehaviour:
   correctRotationTwo: 1
   pipeBehindInSequence: {fileID: 1200355331}
   middleOfPipe: {fileID: 1111515921}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 0
@@ -2723,6 +2739,7 @@ MonoBehaviour:
   correctRotationTwo: 0
   pipeBehindInSequence: {fileID: 9652182}
   middleOfPipe: {fileID: 897808387}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 1
@@ -2842,6 +2859,7 @@ MonoBehaviour:
   correctRotationTwo: 1
   pipeBehindInSequence: {fileID: 9652182}
   middleOfPipe: {fileID: 2092958991}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 1
   isStraight: 0
@@ -2868,6 +2886,7 @@ MonoBehaviour:
   correctRotationTwo: 0
   pipeBehindInSequence: {fileID: 9652182}
   middleOfPipe: {fileID: 1387840864}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 0
@@ -3067,6 +3086,7 @@ MonoBehaviour:
   correctRotationTwo: 0
   pipeBehindInSequence: {fileID: 143237298}
   middleOfPipe: {fileID: 474228992}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 1
@@ -3106,6 +3126,7 @@ MonoBehaviour:
   correctRotationTwo: 3
   pipeBehindInSequence: {fileID: 1987388776}
   middleOfPipe: {fileID: 1187059124}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 1
@@ -3219,6 +3240,7 @@ MonoBehaviour:
   correctRotationTwo: 0
   pipeBehindInSequence: {fileID: 511914570}
   middleOfPipe: {fileID: 1662141867}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 0
@@ -3258,6 +3280,7 @@ MonoBehaviour:
   correctRotationTwo: 4
   pipeBehindInSequence: {fileID: 2012209460}
   middleOfPipe: {fileID: 824266957}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 1
@@ -3303,6 +3326,7 @@ MonoBehaviour:
   correctRotationTwo: 1
   pipeBehindInSequence: {fileID: 1920393188}
   middleOfPipe: {fileID: 1994571563}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 0
@@ -3422,6 +3446,7 @@ MonoBehaviour:
   correctRotationTwo: 4
   pipeBehindInSequence: {fileID: 369469804}
   middleOfPipe: {fileID: 838495219}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 1
@@ -3461,6 +3486,7 @@ MonoBehaviour:
   correctRotationTwo: 3
   pipeBehindInSequence: {fileID: 1643910020}
   middleOfPipe: {fileID: 1402404936}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 0
@@ -3500,6 +3526,7 @@ MonoBehaviour:
   correctRotationTwo: 4
   pipeBehindInSequence: {fileID: 235160939}
   middleOfPipe: {fileID: 727616946}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 0
@@ -3693,6 +3720,7 @@ MonoBehaviour:
   correctRotationTwo: 0
   pipeBehindInSequence: {fileID: 1079211017}
   middleOfPipe: {fileID: 33998031}
+  pipeManagerObject: {fileID: 0}
   isInCorrectPosition: 0
   isActive: 0
   isStraight: 0
