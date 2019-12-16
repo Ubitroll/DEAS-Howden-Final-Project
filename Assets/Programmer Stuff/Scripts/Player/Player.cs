@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] Transform[] cameraPositions;
     Vector3 initOffset;
     Camera mainCamera;
+    [SerializeField] GameObject clickParticle;
 
     [SerializeField] Transform target;
 
@@ -159,6 +160,8 @@ public class Player : MonoBehaviour
             {
                 GetComponent<NavMeshAgent>().stoppingDistance = 0f;
                 GetComponent<NavMeshAgent>().destination = hit.point;
+                Instantiate(clickParticle, new Vector3(hit.point.x,hit.point.y + 0.2f , hit.point.z), Quaternion.identity);
+
             }
             if (hit.transform.tag == "Arrow")
             {

@@ -12,6 +12,7 @@ TagManager:
   - Start_Pipe
   - End_Pipe
   - Room
+  - Floor
   layers:
   - Default
   - TransparentFX
