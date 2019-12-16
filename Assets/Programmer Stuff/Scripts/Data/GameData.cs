@@ -5,40 +5,46 @@ using UnityEngine;
 
 public static class GameData
 {
+    public static int playerScore;
+    public static float minutes;
+    public static int hours;
+    public static GameMode currentGameMode;
 
-    public static GameMode currentGameMode = GameMode.PC;
-
-   [SerializeField] public static float cameraHeight  = 20f;
+    [SerializeField] public static float cameraHeight = 20f;
 
     public static Machine[] machines;
 
-    static int playerScore;
-    
 
 
-    public static void ChangeGameMode()
-    {
-        if(currentGameMode == GameMode.MOBILE)
-        {
-            currentGameMode = GameMode.PC;
-        }
-        else
-        {
-            currentGameMode = GameMode.MOBILE;
-        }
-        
-    }
 
-    public static void EditMode()
-    {
-        if(currentGameMode != GameMode.EDIT) currentGameMode = GameMode.EDIT; else currentGameMode = GameMode.PC;
-    }
+
+
 
     public enum GameMode
     {
-        EDIT,
-        PC,
-        MOBILE
+        TIER_1,
+        TIER_2,
+        TIER_3,
+        TIER_4
     };
+
+
+    //public static void ChangeGameMode()
+    //{
+    //    if(currentGameMode == GameMode.MOBILE)
+    //    {
+    //        currentGameMode = GameMode.PC;
+    //    }
+    //    else
+    //    {
+    //        currentGameMode = GameMode.MOBILE;
+    //    }
+
+    //}
+
+    //public static void EditMode()
+    //{
+    //    if(currentGameMode != GameMode.EDIT) currentGameMode = GameMode.EDIT; else currentGameMode = GameMode.PC;
+    //}
 
 }
