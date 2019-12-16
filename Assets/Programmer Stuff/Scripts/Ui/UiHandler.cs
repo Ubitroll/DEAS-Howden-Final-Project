@@ -33,22 +33,25 @@ public class UiHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameData.hours <= 9)
-        {
-            hours = (GameData.hours + 9).ToString("F0");
-        }
-        else
+        if(GameData.hours < 10)
         {
             hours = "0" + (GameData.hours + 9).ToString("F0");
         }
-
-        if (GameData.minutes >= 10)
+        else
         {
-            minutes = (GameData.minutes).ToString("F0");
+            hours = (GameData.hours + 9).ToString("F0");
+
+        }
+
+
+        if (GameData.minutes < 10)
+        {
+            minutes = "0" + (GameData.minutes).ToString("F0");
         }
         else
         {
-            minutes = "0" + (GameData.minutes).ToString("F0");
+            minutes = GameData.minutes.ToString("F0");
+
         }
 
         uiTexts[1].GetComponent<Text>().text = hours + ":" + minutes;
