@@ -11,6 +11,7 @@ public class PipePathManager : MonoBehaviour
 
     private GameObject[] pipes;
     private GameObject endPipe;
+    public GameObject machine;
 
     // Holds the different states of play
     public enum PipePuzzleState
@@ -93,8 +94,9 @@ public class PipePathManager : MonoBehaviour
         if (currentState == PipePuzzleState.Win)
         {
             // Fix machine 
-
+            machine.GetComponent<Machine>().currentState = Machine.MachineState.WORKING;
             // Set state to not playing    
+            currentState = PipePuzzleState.NotPlaying;
 
         }
     }
