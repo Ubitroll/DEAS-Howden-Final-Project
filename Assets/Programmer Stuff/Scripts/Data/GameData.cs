@@ -7,18 +7,12 @@ public static class GameData
 {
     public static int playerScore;
     public static float minutes;
-    public static int hours;
+    public static float hours;
     public static GameMode currentGameMode;
 
     [SerializeField] public static float cameraHeight = 20f;
 
     public static Machine[] machines;
-
-
-
-
-
-
 
     public enum GameMode
     {
