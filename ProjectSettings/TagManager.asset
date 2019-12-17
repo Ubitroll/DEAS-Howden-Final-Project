@@ -17,6 +17,7 @@ TagManager:
   - UpperArrow
   - DownArrow
   - Ground
+  - PipeActivator
   layers:
   - Default
   - TransparentFX

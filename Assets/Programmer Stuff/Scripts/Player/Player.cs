@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] Transform target;
 
+    public Camera cam1;
+    public Camera cam2;
+
     //puzzle room start positions
     public float prsX;
     public float prsY;
@@ -236,6 +239,14 @@ public class Player : MonoBehaviour
             GameObject.Find("Decorations").SetActive(false);
             GameObject.Find("Workers").SetActive(false);
             GameObject.FindGameObjectWithTag("UpperArrow").SetActive(false);
+
+        }
+
+        if (col.gameObject.tag == "PipeActivator")
+        {
+            cam2.gameObject.SetActive(true);
+
+            GameObject.Find("PipeManagerObject").GetComponent<PipePathManager>().currentState = PipePathManager.PipePuzzleState.Initialising;
 
         }
 
