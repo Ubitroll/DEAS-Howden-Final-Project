@@ -27,7 +27,10 @@ public class Player : MonoBehaviour
 
     CameraScript_2 camScript;
 
-    private GameObject go;   
+    private GameObject go;
+
+    public GameObject upperStairArrow;
+    public GameObject downStairArrow;
     //============================
 
 
@@ -166,9 +169,14 @@ public class Player : MonoBehaviour
                 Instantiate(clickParticle, new Vector3(hit.point.x,hit.point.y + 0.2f , hit.point.z), Quaternion.identity);
 
             }
-            if (hit.transform.tag == "Arrow")
+            if (hit.transform.tag == "UpperArrow")
             {
-                GetComponent<NavMeshAgent>().destination = hit.transform.GetComponent<ArrowScript>().twinArrow.transform.position;
+                GetComponent<NavMeshAgent>().destination = downStairArrow.transform.position;
+            }
+
+            if(hit.transform.tag == "DownArrow")
+            {
+                GetComponent<NavMeshAgent>().destination = upperStairArrow.transform.position;
             }
           
         }
