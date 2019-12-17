@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
 
     public int machineState;
 
+    CameraScript_2 camScript;
+
     private GameObject go;   
     //============================
 
@@ -32,6 +34,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        camScript = Camera.main.GetComponent<CameraScript_2>();
         initOffset = Camera.main.transform.position - transform.position;
         mainCamera = Camera.main;
         target = null;
@@ -213,16 +216,8 @@ public class Player : MonoBehaviour
     {
         if (col.gameObject.tag == "Floor")
         {
-            Room room = col.GetComponentInParent<Room>();
-            if (room != currentRoom)
-            {
-                prevRoom = currentRoom;
-                currentRoom = room;
-            }
-            else
-            {
-                currentRoom = room;
-            }
+            CameraScript_2.cameraPos = new Vector3(col.GetComponent<MeshRenderer>().bounds.center.x, camScript.cameraHeight[1], col.GetComponent<MeshRenderer>().bounds.center.z);
+
         }
 
         if (col.gameObject.tag == "resetFloor" && machineState != 1)
