@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: 165424604}
   - component: {fileID: 165424603}
   - component: {fileID: 165424602}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: PipeActivator
   m_Icon: {fileID: 0}
@@ -3691,8 +3691,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 6.4761467}
-  m_Center: {x: 0, y: 1.7280726e-15, z: 2.7380702}
+  m_Size: {x: 1, y: 1, z: 1.8391644}
+  m_Center: {x: 0, y: 3.2044342e-16, z: 0.41957527}
 --- !u!23 &620002969
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9655,8 +9655,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 3.9921594}
-  m_Center: {x: 0, y: 1.4642932e-15, z: 1.4960775}
+  m_Size: {x: 1, y: 1, z: 1.2999578}
+  m_Center: {x: 0, y: 1.0800133e-16, z: 0.14997546}
 --- !u!23 &1866897802
 MeshRenderer:
   m_ObjectHideFlags: 0
