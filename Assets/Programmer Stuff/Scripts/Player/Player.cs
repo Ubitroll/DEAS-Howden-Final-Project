@@ -228,6 +228,17 @@ public class Player : MonoBehaviour
 
         }
 
+
+        if (col.gameObject.tag == "UpperArrow")
+        {
+            GetComponent<NavMeshAgent>().SetDestination(downStairArrow.transform.position);
+            GameObject.Find("Ground").SetActive(false);
+            GameObject.Find("Decorations").SetActive(false);
+            GameObject.Find("Workers").SetActive(false);
+            GameObject.FindGameObjectWithTag("UpperArrow").SetActive(false);
+
+        }
+
         if (col.gameObject.tag == "resetFloor" && machineState != 1)
         {
             transform.position = new Vector3(prsX, prsY, prsZ);
