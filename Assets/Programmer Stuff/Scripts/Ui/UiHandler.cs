@@ -35,11 +35,11 @@ public class UiHandler : MonoBehaviour
     {
         if(GameData.hours < 10)
         {
-            hours = "0" + (GameData.hours + 9).ToString("F0");
+            hours = "0" + (GameData.hours).ToString("F0");
         }
         else
         {
-            hours = (GameData.hours + 9).ToString("F0");
+            hours = GameData.hours.ToString("F0");
 
         }
 
