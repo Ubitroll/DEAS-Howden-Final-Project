@@ -33,7 +33,9 @@ public class UiHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+
+       
 
         if (GameData.hours < 10)
         {
@@ -56,6 +58,7 @@ public class UiHandler : MonoBehaviour
 
         }
 
+        uiTexts[0].GetComponent<Text>().text = GameData.playerScore.ToString();
         uiTexts[1].GetComponent<Text>().text = hours + ":" + minutes;
     }
 

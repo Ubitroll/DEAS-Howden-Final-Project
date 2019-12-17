@@ -8,7 +8,7 @@ public class Machine : MonoBehaviour
     public enum MachineState { BROKEN, BREAKING, WORKING }
     public MachineState currentState;
     public Timer timer;
-    float lifeTime;
+    public float lifeTime;
     [SerializeField] Scrollbar health;
     [SerializeField] Text machineText;
 
@@ -74,4 +74,5 @@ public class Machine : MonoBehaviour
             return currentState;
         }
     }
+   
 }

@@ -127,11 +127,11 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.A))
-            machineState = 2;
+        //if (Input.GetKey(KeyCode.A))
+        //    machineState = 2;
 
-        if (Input.GetKey(KeyCode.D))
-            machineState = 3;
+        //if (Input.GetKey(KeyCode.D))
+        //    machineState = 3;
 
         // if (Input.GetKey(KeyCode.A))
         //     transform.Translate(Vector3.left * 2 * Time.deltaTime);
