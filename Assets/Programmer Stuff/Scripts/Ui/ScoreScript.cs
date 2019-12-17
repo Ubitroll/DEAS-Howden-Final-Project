@@ -35,7 +35,7 @@ public class ScoreScript : MonoBehaviour
             minutes += Time.deltaTime;
         }
         GameData.minutes = minutes;
-        GameData.hours = hours;
+        GameData.hours = hours + 9;
     }
 
 }
