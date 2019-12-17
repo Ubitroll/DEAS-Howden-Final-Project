@@ -5817,7 +5817,7 @@ PrefabInstance:
     - target: {fileID: 2753243588982959614, guid: 6a8b17b3b6fe5e7489d772b846714b86,
         type: 3}
       propertyPath: m_TagString
-      value: UpperArrow
+      value: DownArrow
       objectReference: {fileID: 0}
     - target: {fileID: 2753243588982959614, guid: 6a8b17b3b6fe5e7489d772b846714b86,
         type: 3}

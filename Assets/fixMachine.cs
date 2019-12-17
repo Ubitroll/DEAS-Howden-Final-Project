@@ -12,6 +12,9 @@ public class fixMachine : MonoBehaviour
             GameObject.Find("Machine").GetComponent<Machine>().currentState = Machine.MachineState.WORKING;
             GameObject.Find("Machine").GetComponent<Machine>().lifeTime = Random.Range(10, 23);
             GameObject.Find("Machine").GetComponent<Machine>().timer.timeLeft = Random.Range(8, 16);
+            GameObject.FindWithTag("UpperArrow").SetActive(false);
+            GameObject.FindWithTag("DownArrow").SetActive(true);
+
         }
     }
 }
