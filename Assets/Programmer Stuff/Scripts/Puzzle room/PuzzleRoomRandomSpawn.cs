@@ -17,11 +17,11 @@ public class PuzzleRoomRandomSpawn : MonoBehaviour
     {
 
 
-        room = UnityEngine.Random.Range(0, 3);  //randomly chooses between all 5 room prefabs
+        room = UnityEngine.Random.Range(0, 1);  //randomly chooses between all 5 room prefabs
         
         if (prevRoom == room)   //makes sure it wont spawn the same room twice in a row
         {
-            room = UnityEngine.Random.Range(0, 3);
+            room = UnityEngine.Random.Range(0, 1);
             Instantiate(Rooms[room], new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), Quaternion.identity);
         }
         else

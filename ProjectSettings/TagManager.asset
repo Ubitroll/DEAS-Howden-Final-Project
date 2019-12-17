@@ -13,6 +13,7 @@ TagManager:
   - End_Pipe
   - Room
   - Floor
+  - resetFloor
   layers:
   - Default
   - TransparentFX

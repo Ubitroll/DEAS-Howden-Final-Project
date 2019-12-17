@@ -178,12 +178,12 @@ public class Player : MonoBehaviour
     //resets the player to the begining of the room if they touch the bad part of the floor
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "resetFloor" && machineState != 1)
-        {
-            transform.position = new Vector3(prsX, prsY, prsZ);
-            GetComponent<NavMeshAgent>().SetDestination(transform.position);
+        //if (collision.gameObject.tag == "resetFloor" && machineState != 1)
+        //{
+        //    transform.position = new Vector3(prsX, prsY, prsZ);
+        //    GetComponent<NavMeshAgent>().SetDestination(transform.position);
 
-        }
+        //}
 
         if (collision.gameObject.tag == "Arrow")
         {
@@ -194,6 +194,7 @@ public class Player : MonoBehaviour
 
     }
 
+   
 
     void OnTriggerExit(Collider col)
     {
@@ -222,6 +223,13 @@ public class Player : MonoBehaviour
             {
                 currentRoom = room;
             }
+        }
+
+        if (col.gameObject.tag == "resetFloor" && machineState != 1)
+        {
+            transform.position = new Vector3(prsX, prsY, prsZ);
+            GetComponent<NavMeshAgent>().SetDestination(transform.position);
+
         }
 
         go = GameObject.FindWithTag("Room");
