@@ -150,11 +150,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rooms:
-  - {fileID: 8262023340556433714, guid: faa156956cb48794b847016e9ba297c1, type: 3}
-  - {fileID: 7653526890056859721, guid: b9339f023fd24e347b425551fc78d582, type: 3}
-  - {fileID: 107548127795032845, guid: c602850e1aef8d04095f8e286567087f, type: 3}
-  - {fileID: 6631598425381915956, guid: 8a2f10b1c66179c46868fe5b5176cc40, type: 3}
-  - {fileID: 101149119985748033, guid: 018ed8925a0ff614fb0209b60d716c09, type: 3}
+  - {fileID: 927762709998881885, guid: 4b394a260a51de74d8b6edf4fd55b944, type: 3}
+  - {fileID: 4408220509367397576, guid: 3ebc7dcf7234eb544bfbc3aa27f7d392, type: 3}
+  - {fileID: 7321343699852280695, guid: e5f2f142e94ec1f4088acade38a9a924, type: 3}
   room: 0
   prevRoom: 0
 --- !u!4 &49704193
@@ -165,7 +163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49704191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.47, y: -0.97, z: -9.36}
+  m_LocalPosition: {x: 30.9, y: 1.43, z: -23.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -605,6 +603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   cameraPositions: []
+  clickParticle: {fileID: 0}
   target: {fileID: 0}
   prsX: 0
   prsY: 0
