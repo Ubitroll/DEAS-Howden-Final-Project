@@ -25,6 +25,9 @@ public class PipePathManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Sets camera to inactive
+        cam.gameObject.SetActive(false);
+
         // Set state to not playing
         currentState = PipePuzzleState.NotPlaying;
 
@@ -41,6 +44,9 @@ public class PipePathManager : MonoBehaviour
         // If in initialising state
         if (currentState == PipePuzzleState.Initialising)
         {
+            // Sets camera to active
+            cam.gameObject.SetActive(true);
+
             // For each pipe in the array run the ininialise pipe method from the PipePieceScript
             for (int i = 0; i < pipes.Length; i++)
             {
@@ -98,6 +104,13 @@ public class PipePathManager : MonoBehaviour
             // Set state to not playing    
             currentState = PipePuzzleState.NotPlaying;
 
+        }
+
+        // If state is in not playing
+        if (currentState == PipePuzzleState.NotPlaying)
+        {
+            // Sets camera to inactive
+            cam.gameObject.SetActive(false);
         }
     }
 }
