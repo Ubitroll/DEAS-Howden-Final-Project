@@ -25,7 +25,7 @@ public class Blue_Gate : MonoBehaviour
 
         //sets the door to open and will continue to open even if the player isnt standing on the button
         if (gateOpen == true)
-           transform.Translate(0, -2 * Time.deltaTime, 0);
+           transform.Translate(0, -20 * Time.deltaTime, 0);
            
         
 

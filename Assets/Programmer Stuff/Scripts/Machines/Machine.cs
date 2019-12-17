@@ -28,20 +28,20 @@ public class Machine : MonoBehaviour
         {
             case MachineState.WORKING:
 
-                transform.GetChild(0).gameObject.SetActive(false);
-                GameObject.Find("Player").GetComponent<Player>().machineState = 1;
+               // transform.GetChild(0).gameObject.SetActive(false);
+                GameObject.FindWithTag("Player").GetComponent<Player>().machineState = 1;
                 machineText.text = "Working...";
 
                 break;
 
             case MachineState.BROKEN:
-                transform.GetChild(0).gameObject.SetActive(true);
-                GameObject.Find("Player").GetComponent<Player>().machineState = 3;
+               // transform.GetChild(0).gameObject.SetActive(true);
+                GameObject.FindWithTag("Player").GetComponent<Player>().machineState = 3;
                 machineText.text = "BROKEN";
                 break;
 
             case MachineState.BREAKING:
-                GameObject.Find("Player").GetComponent<Player>().machineState = 2;
+                GameObject.FindWithTag("Player").GetComponent<Player>().machineState = 2;
                 break;
 
         }
