@@ -17,12 +17,12 @@ public class MenuManager : MonoBehaviour
         
     }
 
-    void StartGame()
+    public void StartGame()
     {
         Application.LoadLevel("GameScene");
     }
 
-    void ExitGame()
+    public void ExitGame()
     {
         Application.Quit();
     }

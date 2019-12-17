@@ -159,28 +159,32 @@ public class Player : MonoBehaviour
         bool hasHit = Physics.Raycast(ray, out hit);
         if (hasHit)
         {
-            if (hit.transform.tag == "Ground")
+            if (GameObject.Find("PipeManagerObject").GetComponent<PipePathManager>().currentState == PipePathManager.PipePuzzleState.NotPlaying)
             {
-                Debug.Log("enemy hit");
-                GetComponent<NavMeshAgent>().stoppingDistance = 0f;
-                GetComponent<NavMeshAgent>().destination = hit.point;
-            }
-            else
-            {
-                GetComponent<NavMeshAgent>().stoppingDistance = 0f;
-                GetComponent<NavMeshAgent>().destination = hit.point;
-                Instantiate(clickParticle, new Vector3(hit.point.x,hit.point.y + 0.2f , hit.point.z), Quaternion.identity);
+                if (hit.transform.tag == "Ground")
+                {
+                    Debug.Log("enemy hit");
+                    GetComponent<NavMeshAgent>().stoppingDistance = 0f;
+                    GetComponent<NavMeshAgent>().destination = hit.point;
+                }
+                else
+                {
+                    GetComponent<NavMeshAgent>().stoppingDistance = 0f;
+                    GetComponent<NavMeshAgent>().destination = hit.point;
+                    Instantiate(clickParticle, new Vector3(hit.point.x, hit.point.y + 0.2f, hit.point.z), Quaternion.identity);
 
-            }
-            if (hit.transform.tag == "UpperArrow")
-            {
-                GetComponent<NavMeshAgent>().destination = downStairArrow.transform.position;
-            }
+                }
+                if (hit.transform.tag == "UpperArrow")
+                {
+                    GetComponent<NavMeshAgent>().destination = downStairArrow.transform.position;
+                }
 
-            if(hit.transform.tag == "DownArrow")
-            {
-                GetComponent<NavMeshAgent>().destination = upperStairArrow.transform.position;
+                if (hit.transform.tag == "DownArrow")
+                {
+                    GetComponent<NavMeshAgent>().destination = upperStairArrow.transform.position;
+                }
             }
+            
           
         }
 
@@ -244,7 +248,7 @@ public class Player : MonoBehaviour
 
         if (col.gameObject.tag == "PipeActivator")
         {
-            cam2.gameObject.SetActive(true);
+            //cam2.gameObject.SetActive(true);
 
             GameObject.Find("PipeManagerObject").GetComponent<PipePathManager>().currentState = PipePathManager.PipePuzzleState.Initialising;
 
